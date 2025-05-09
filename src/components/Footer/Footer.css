@@ -1,0 +1,45 @@
+.x-btn{
+    width: 25px;
+    height: 25px;
+    background-image: url('data:image/png;base64,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');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+.telegram-btn{
+    width: 25px;
+    height: 25px;
+    background-image: url('https://img.icons8.com/ios_filled/512/telegram.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    margin-left: 10px;
+}
+.footer p{
+    font-size: 12px;
+    pointer-events: none;
+    color: lightgray;
+    
+}
+.footer h6{
+    font-size: 14px;
+    pointer-events: none;
+    color: lightgray;
+}
+.footer{
+    border-top: 1px solid gray;
+    padding-left: 27%;
+    padding-bottom: 2%;
+    padding-top: 2%;
+   
+}
+.btn-div{
+    display: flex;
+    flex-direction: row;
+}

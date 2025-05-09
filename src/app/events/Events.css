@@ -1,0 +1,121 @@
+@media screen and (min-width: 1280px) {
+    .events-page{
+        margin: 100px;
+    }
+    .img-grid{
+        display: flex;
+        flex-direction: column;
+    }
+    .top-half, .bottom-half{
+        display: flex;
+        flex-direction: row;
+    }
+    .bottom-half{
+        margin-top: 1%;
+    }
+    .img1-top{
+        width: 59%;
+        height: 500px;
+        background-color: lightgray;
+        margin-right: 0.5%;
+        color: rgb(70, 70, 70);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+    }
+    .img2-top{
+        width: 39%;
+        height: 500px;
+        background-color: lightgray;
+        margin-left: 0.5%;
+        color: rgb(70, 70, 70);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+    }
+    .img1-bottom{
+        width: 39%;
+        height: 400px;
+        background-color: lightgray;
+        margin-right: 0.5%;
+        color: rgb(70, 70, 70);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+    }
+    .img2-bottom{
+        width: 59%;
+        height: 400px;
+        background-color: lightgray;
+        margin-left: 0.5%;
+        color: rgb(70, 70, 70);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+    }
+    .ticket-shop{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 5%;
+    }
+}
+.events-page-title h1{
+    font-weight: 800;
+}
+.ticket-shop h1{
+    font-weight: 800;
+}
+.form-div{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.events-ellipse1{
+        position: absolute;
+        width: 1200px;
+        height: 900px;
+        background: radial-gradient(circle,rgba(172, 7, 255, 1),rgba(144, 8, 240, 1),rgba(91, 10, 211, 1),rgba(48, 12, 188, 1),rgba(32, 12, 180, 1),rgba(10, 13, 168, 1));
+
+        top:100px;
+        left: -10%;
+        opacity: 0.4;
+        filter: blur(300px);
+        border-radius: 50%;
+        z-index: -1;
+        pointer-events: none;
+}
+.events-ellipse2{
+    position: absolute;
+    width: 1200px;
+    height: 900px;
+    background: radial-gradient(circle,rgba(172, 7, 255, 1),rgba(144, 8, 240, 1),rgba(91, 10, 211, 1),rgba(48, 12, 188, 1),rgba(32, 12, 180, 1),rgba(10, 13, 168, 1));
+
+    top:400px;
+    left: 70%;
+    opacity: 0.4;
+    filter: blur(300px);
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.events-ellipse3{
+    position: absolute;
+    width: 1200px;
+    height: 900px;
+    background: radial-gradient(circle,rgba(172, 7, 255, 1),rgba(144, 8, 240, 1),rgba(91, 10, 211, 1),rgba(48, 12, 188, 1),rgba(32, 12, 180, 1),rgba(10, 13, 168, 1));
+
+    top:1200px;
+    left: 10%;
+    opacity: 0.4;
+    filter: blur(300px);
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+}

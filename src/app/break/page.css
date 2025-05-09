@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #26004d, #6a00cc);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  .text {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .sad-face {
+    font-size: 2rem;
+    margin-left: 0.5rem;
+  }
+  
+  .image img {
+    width: 200px; /* можна змінити розмір телефону */
+    height: auto;
+  }
+  .bg-gradient {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: -1;
+    opacity: 0.8;
+  }
+  
+  .blur1 {
+    top: -100px;
+    left: -100px;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(172, 7, 255, 0.6), transparent);
+  }
+  
+  .blur2 {
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(0, 195, 255, 0.4), transparent);
+  }
+  
+  .blur3 {
+    bottom: -200px;
+    left: 20%;
+    width: 600px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+  }
+  
+  .blur4 {
+    top: 75%;
+    right: -150px;
+    width: 1000px;
+    height: 900px;
+    background: radial-gradient(circle, rgba(255, 0, 128, 0.4), transparent);
+  }
+  
+  .blur5 {
+    top: 30%;
+    left: 40%;
+    width: 600px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+  }
