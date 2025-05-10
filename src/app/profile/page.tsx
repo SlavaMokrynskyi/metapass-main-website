@@ -11,15 +11,7 @@ export default function Profile() {
 			<NavBar />
 			<div className='profile-page'>
 				<div className='profile-content'>
-					<div className='left-side'>
-						<div className='events'>
-							<div className='events-title'>
-								<h2>Events you have attended</h2>
-							</div>
-							<EventCards />
-							<div className='arrow-down'></div>
-						</div>
-					</div>
+					
 
 					<div className='right-side'>
 						<div className='right-side-title'>
@@ -39,6 +31,15 @@ export default function Profile() {
 							<p>Discord()</p>
 							<p>Telegram()</p>
 							<p>X</p>
+						</div>
+					</div>
+					<div className='left-side'>
+						<div className='events'>
+							<div className='events-title'>
+								<h2>Events you have attended</h2>
+							</div>
+							<EventCards />
+							<div className='arrow-down'></div>
 						</div>
 					</div>
 				</div>

@@ -51,10 +51,15 @@ export default function About() {
 						</p>
 					</div>
 				</div>
-
+				<div className='image-column phone'>
+						<img src='images\phone.png' alt='Phone Ticket' />
+					</div>
 				<h1 className='title_our'>Our approach</h1>
 
 				<div className='row'>
+					<div className='image-column pc'>
+						<img src='images\phone.png' alt='Phone Ticket' />
+					</div>
 					<div className='text-column'>
 						<p>
 							We design and apply innovative technology such as blockchain and
@@ -68,10 +73,6 @@ export default function About() {
 							business conferences to dance parties with thousands of people
 							from dozens of different countries.
 						</p>
-					</div>
-
-					<div className='image-column'>
-						<img src='images\phone.png' alt='Phone Ticket' />
 					</div>
 				</div>
 				<h1 className='title '>The people behind METAPASS</h1>

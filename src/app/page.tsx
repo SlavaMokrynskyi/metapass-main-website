@@ -52,6 +52,7 @@ export default function Home() {
 						</p>
 					</div>
 					<div className='feature2'>
+						<img src='images\feature_icon2.png' alt='' />
 						<p>
 							<span className='bold'>An end to ticket fraud</span> <br />
 							Our tickets are <br />
@@ -61,7 +62,7 @@ export default function Home() {
 							smartphones, making <br />
 							fraud impossible.
 						</p>
-						<img src='images\feature_icon2.png' alt='' />
+						
 					</div>
 				</div>
 				<div className='features-second-half'>
@@ -79,6 +80,7 @@ export default function Home() {
 						</p>
 					</div>
 					<div className='feature2'>
+						<img src='images\feature_icon4.png' alt='' />
 						<p>
 							<span className='bold'>Serve all markets</span>
 							<br />
@@ -89,7 +91,6 @@ export default function Home() {
 							them on a controlled <br />
 							secondary market. <br />
 						</p>
-						<img src='images\feature_icon4.png' alt='' />
 					</div>
 				</div>
 			</div>
@@ -170,7 +171,7 @@ export default function Home() {
 				<div className='ellipse6'></div>
 				<div>
 					<h2 className='section-title'>Powerful innovative features</h2>
-					<p>For fans, artists, venues & organizers</p>
+					<h2 className='section-text'>For fans, artists, venues & organizers</h2>
 				</div>
 				<div className='feature-highlight'>
 					<img src='images\highlight_icon1.png' alt='' />
@@ -180,21 +181,20 @@ export default function Home() {
 							Unlimited ticket types and upsells, all in one place. Save
 							valuable time and prevent costly mistakes, while enjoying
 							real-time revenue payouts and insights into your finances. <br />
-							___________________________________________________
 						</span>
 					</p>
 				</div>
 				<div className='feature-highlight'>
+					<img src='images\highlight_icon2.png' alt='' />
 					<p>
 						<span className='bold'>Selling & reselling</span> <br />
 						<span className='smaller-text'>
 							Only you determine how and when tickets are (re)sold. Keep prices
 							the same all around, set up discounts for certain groups or even
 							switch on dynamic pricing. Your call. <br />
-							___________________________________________________
 						</span>
 					</p>
-					<img src='images\highlight_icon2.png' alt='' />
+					
 				</div>
 				<div className='feature-highlight'>
 					<img src='images\highlight_icon3.png' alt='' />
@@ -204,7 +204,6 @@ export default function Home() {
 							Collect relevant data from current & previous ticket holders and
 							friend groups. Cater to specific target groups, identify your
 							superusers and make every move a calculated one. <br />
-							___________________________________________________
 						</span>
 					</p>
 				</div>
