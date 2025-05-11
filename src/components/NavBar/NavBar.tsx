@@ -48,6 +48,45 @@ const NavBar = () => {
 					</Link>
 				</div>
 			</div>
+			<input type='checkbox' id='mobile-menu-toggle' hidden />
+			<label htmlFor='mobile-menu-toggle' className='burger'>
+				<div></div>
+				<div></div>
+				<div></div>
+			</label>
+
+			<div className='mobile-menu'>
+				<Link
+					href='/'
+					className={`nav-link ${pathname === '/' ? 'active' : ''}`}
+				>
+					home
+				</Link>
+				<Link
+					href='/events'
+					className={`nav-link ${pathname === '/events' ? 'active' : ''}`}
+				>
+					events
+				</Link>
+				<Link
+					href='/profile'
+					className={`nav-link ${pathname === '/profile' ? 'active' : ''}`}
+				>
+					profile
+				</Link>
+				<Link
+					href='/about'
+					className={`nav-link ${pathname === '/about' ? 'active' : ''}`}
+				>
+					about
+				</Link>
+				<Link
+					href='/wallet'
+					className={`nav-link ${pathname === '/wallet' ? 'active' : ''}`}
+				>
+					wallet
+				</Link>
+			</div>
 		</>
 	)
 }

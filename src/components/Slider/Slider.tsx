@@ -1,55 +1,86 @@
-"use client";
-import React, { useState } from 'react'
-import "./Slider.css"
+"use client"
+import './Slider.css'
+import { Ticket, Tickets } from '@/types/types';
+import { useState } from 'react'
+import React from 'react'
+import data from './data';
+import { useDispatch, UseDispatch } from 'react-redux';
 
-type SimpleSliderProps = {
-	images: string[] 
-}
+import { addTicket } from '@/store';
 
-const SimpleSlider: React.FC<SimpleSliderProps> = ({ images }) => {
-	const [currentIndex, setCurrentIndex] = useState(0)
+const Slider = () => {
+	const[tickets] = useState<Tickets>(data);
+	const[index,setIndex] = useState<number>(0);
 
-	const nextSlide = () => {
-		setCurrentIndex(prev => (prev === images.length - 1 ? 0 : prev + 1))
-        console.log('next slide')
-    }
+	const dispatch = useDispatch();
 
+	const nextSlide = () =>{
+		if(index == data.length-1)
+		{
+			setIndex(0);
+		}
+		else
+		{
+			setIndex(index + 1);
+		}
+	}
 	const prevSlide = () => {
-		setCurrentIndex(prev => (prev === 0 ? images.length - 1 : prev - 1))
-        console.log('prev slide')
+		if (index == 0) {
+			setIndex(data.length-1)
+		} else {
+			setIndex(index - 1)
+		}
 	}
 
-	return (
-		<div
-			className='slider-box'
-			style={{ position: 'relative', maxWidth: '800px', margin: 'auto' }}
-		>
-			<div className='slider-img'>
-				<img src={images[currentIndex]} alt='' />
-				<div>
-					<p>name event: 77777</p>
-					<p>organize: 77777</p>
-					<p>event type: 77777</p>
-					<p>brief description :</p>
-                    <div className='description'>               
-                        77777777 <br />
-                        77777777 <br />
-                        77777777 <br />
-                    </div>
+	const buyTicket = () =>{
+		const ticket: Ticket = {
+			id: tickets[index].id,
+			image: tickets[index].image,
+			name_event: tickets[index].name_event,
+			organizer: tickets[index].organizer,
+			event_type: tickets[index].event_type,
+			description: tickets[index].description,
+		} 
+		dispatch(addTicket(ticket))
+	}
+
+  return (
+		<div className='slider-box'>
+			<div className='slider-window'>
+				<div
+					className='slider-track'
+					style={{
+						transform: `translateX(-${index * 100}%)`,
+					}}
+				>
+					{data.map((ticket: Ticket) => (
+						<div className='slider-slide' key={ticket.id}>
+							<img src={ticket.image} alt='' />
+							<div className='ticket-info-text'>
+								<p>Event name: {ticket.name_event}</p>
+								<p>Organizer: {ticket.organizer}</p>
+								<p>Event type: {ticket.event_type}</p>
+								<p>Description:</p>
+								<div className='description-box'>
+									<p>{ticket.description}</p>
+								</div>
+								<button onClick={buyTicket} className='buy-btn'>
+									Buy
+								</button>
+							</div>
+						</div>
+					))}
 				</div>
 			</div>
-			<div
-				className='slider-btn-left'
-				onClick={prevSlide}
-				style={{ position: 'absolute', left: '10px', top: '50%' }}
-			></div>
-			<div
-				className='slider-btn-right'
-				onClick={nextSlide}
-				style={{ position: 'absolute', right: '10px', top: '50%' }}
-			></div>
+
+			<div className='slider-controls'>
+				<button className='prev-slide' onClick={prevSlide}>
+					❮
+				</button>
+				<button onClick={nextSlide}>❯</button>
+			</div>
 		</div>
 	)
 }
 
-export default SimpleSlider
+export default Slider

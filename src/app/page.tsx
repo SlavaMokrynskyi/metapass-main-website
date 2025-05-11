@@ -184,7 +184,7 @@ export default function Home() {
 						</span>
 					</p>
 				</div>
-				<div className='feature-highlight'>
+				<div className='feature-highlight middle'>
 					<img src='images\highlight_icon2.png' alt='' />
 					<p>
 						<span className='bold'>Selling & reselling</span> <br />

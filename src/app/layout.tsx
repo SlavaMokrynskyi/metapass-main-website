@@ -2,6 +2,7 @@
 import Head from 'next/head'
 import { Metadata } from 'next'
 import "./layout.css"
+import { Providers } from './Provider'
 
 export const metadata: Metadata = {
 	title: 'MetaPass',
@@ -31,7 +32,9 @@ export default function RootLayout({
 				/>
 			</Head>
 			<body>
-				<div>{children}</div>
+				<Providers>
+					<div>{children}</div>
+				</Providers>
 			</body>
 		</html>
 	)

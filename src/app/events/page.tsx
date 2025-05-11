@@ -1,8 +1,8 @@
 import React from 'react'
 import NavBar from '@/components/NavBar/NavBar'
 import Footer from '@/components/Footer/Footer'
-import Slider from '@/components/Slider/Slider'
 import Form from '@/components/Form/Form'
+import Slider from '@/components/Slider/Slider'
 import './Events.css'
 
 const Events = () => {
@@ -41,14 +41,7 @@ const Events = () => {
 				</div>
 				<div className='ticket-shop'>
 					<h1>Buy a ticket</h1>
-
-					<Slider
-						images={[
-							'images/ticket_icon.png',
-							'images/ticket_icon.png',
-							'images/ticket_icon.png',
-						]}
-					/>
+					<Slider/>
 				</div>
 				<div className='form-div'>
 					<Form />

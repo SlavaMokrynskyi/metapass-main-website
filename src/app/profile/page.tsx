@@ -1,7 +1,7 @@
 import "./page.css";
 import NavBar from "@/components/NavBar/NavBar";
 import Footer from "@/components/Footer/Footer";
-import EventCards from "@/components/EventCards/EventCards";
+import SliderDown from "@/components/SliderDown/SliderDown";
 
 export default function Profile() {
 
@@ -11,8 +11,6 @@ export default function Profile() {
 			<NavBar />
 			<div className='profile-page'>
 				<div className='profile-content'>
-					
-
 					<div className='right-side'>
 						<div className='right-side-title'>
 							<h2 className='user-name'>User name</h2>
@@ -34,13 +32,7 @@ export default function Profile() {
 						</div>
 					</div>
 					<div className='left-side'>
-						<div className='events'>
-							<div className='events-title'>
-								<h2>Events you have attended</h2>
-							</div>
-							<EventCards />
-							<div className='arrow-down'></div>
-						</div>
+						<SliderDown/>
 					</div>
 				</div>
 

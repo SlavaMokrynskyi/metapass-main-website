@@ -180,7 +180,10 @@
         padding: 2%;
         align-items: center
     }
-  
+    .middle{
+        display: flex;
+        flex-direction: row-reverse;
+    }
     .feature-highlight p{
         font-size: 24px;
         border: none;
