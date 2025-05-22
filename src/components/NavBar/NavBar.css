@@ -1,13 +1,25 @@
 @media screen and (min-width:  992px) {
     .nav-bar{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        color: white;
-        margin-left: 20px;
-        margin-right: 30px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+      top: 0;
+      left: 0;
+      background-color: #170034;
+      position: fixed;
+      width: 100%;
+      transition: transform 0.3s ease;
+	    z-index: 1000;
     }
+    .nav-bar.hidden {
+	    transform: translateY(-100%);
+    }
+    .nav-bar.visible {
+	    transform: translateY(0);
+    }
+
     .nav-bar p{
         font-size: xx-large;
         padding-left: 25px;
@@ -26,25 +38,31 @@
         padding-left: 25px;
         padding-right: 25px;
         transition: all 0.5s ease;
+        font-size: 16px;
     }
     .nav-bar a:hover{
         transform: scale(1.2); 
         text-shadow: 0 0 5px rgba(255, 255, 255, 0.2); 
     }
-    .active{
-        transform: scale(1.2);
-    }
-    .wallet-link a{
+    .nav-bar button{
+        margin-top: 10px;
         color: white;
+        background-color: transparent;
+        border:none;
         text-decoration: underline;
         text-underline-offset: 8px;
         padding-left: 25px;
         padding-right: 25px;
         transition: all 0.5s ease;
+        font-size: 16px;
+        cursor: pointer;
     }
-    .wallet-link a:hover{
+    .nav-bar button:hover{
         transform: scale(1.2); 
         text-shadow: 0 0 5px rgba(255, 255, 255, 0.2); 
+    }
+    .active{
+        transform: scale(1.2);
     }
     .burger{
         display: none;
@@ -56,6 +74,52 @@
     .mobile-menu{
         display: none;
     }
+    .auth-title
+{
+    display: flex;
+    flex-direction: row;
+}
+.auth-logic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.auth-title h1{
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-style: normal;
+}
+.auth-title img{
+    width: 80px;
+    padding-left: 20px;
+}
+.auth-elipse1{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    background: linear-gradient(rgba(172, 7, 255, 1), rgba(168, 26, 10, 1));
+    top: 100px;
+    left: 23%;
+    opacity: 0.4;
+    filter: blur(300px);
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+}
+.auth-elipse2{
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(172, 7, 255, 1), rgba(13, 10, 168, 1));
+    top: 400px;
+    left: 32%;
+    opacity: 0.4;
+    filter: blur(300px);
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+}
 }
 @media screen and (max-width: 991px) {
     .nav-bar {

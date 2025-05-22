@@ -1,4 +1,5 @@
 import { store } from "@/store";
+import { ReactElement } from "react";
 
 export type Ticket = {
     id : number
@@ -9,7 +10,7 @@ export type Ticket = {
     description : string
 };
 
-export type Tickets = Ticket[];
+export type TicketsType = Ticket[];
 
 export type ContactInfoType = {
 	name: string
@@ -17,5 +18,11 @@ export type ContactInfoType = {
 	email: string
 	number: string
 }
+
+export type ModalProps = {
+	active: boolean;
+	setActive: (active: boolean) => void;
+    children: ReactElement;
+};
 
 export type StoreType = ReturnType<typeof store.getState>

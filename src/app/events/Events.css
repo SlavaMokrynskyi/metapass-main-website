@@ -6,6 +6,11 @@
         display: flex;
         flex-direction: column;
     }
+    .img-grid img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
     .top-half, .bottom-half{
         display: flex;
         flex-direction: row;
@@ -16,52 +21,48 @@
     .img1-top{
         width: 59%;
         height: 500px;
-        background-color: lightgray;
         margin-right: 0.5%;
         color: rgb(70, 70, 70);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-transform: uppercase;
+        inset: 0;
     }
     .img2-top{
         width: 39%;
         height: 500px;
-        background-color: lightgray;
         margin-left: 0.5%;
         color: rgb(70, 70, 70);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-transform: uppercase;
     }
     .img1-bottom{
         width: 39%;
         height: 400px;
-        background-color: lightgray;
         margin-right: 0.5%;
         color: rgb(70, 70, 70);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-transform: uppercase;
     }
     .img2-bottom{
         width: 59%;
         height: 400px;
-        background-color: lightgray;
         margin-left: 0.5%;
         color: rgb(70, 70, 70);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-transform: uppercase;
     }
     .ticket-shop{
         display: flex;
         flex-direction: column;
         align-items: center;
         padding-top: 5%;
+        
+    }
+    .img1-top,
+    .img2-top,
+    .img1-bottom,
+    .img2-bottom {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        font-size: 24px;
+        text-transform: uppercase;
     }
 }
 @media screen and (min-width: 992px) and (max-width: 1280px) {
@@ -82,7 +83,6 @@
     .img1-top{
         width: 59%;
         height: 500px;
-        background-color: lightgray;
         margin-right: 0.5%;
         color: rgb(70, 70, 70);
         display: flex;
@@ -93,7 +93,6 @@
     .img2-top{
         width: 39%;
         height: 500px;
-        background-color: lightgray;
         margin-left: 0.5%;
         color: rgb(70, 70, 70);
         display: flex;
@@ -104,7 +103,6 @@
     .img1-bottom{
         width: 39%;
         height: 400px;
-        background-color: lightgray;
         margin-right: 0.5%;
         color: rgb(70, 70, 70);
         display: flex;
@@ -115,19 +113,30 @@
     .img2-bottom{
         width: 59%;
         height: 400px;
-        background-color: lightgray;
         margin-left: 0.5%;
         color: rgb(70, 70, 70);
-        display: flex;
         align-items: center;
         justify-content: center;
-        text-transform: uppercase;
     }
     .ticket-shop{
         display: flex;
         flex-direction: column;
         align-items: center;
         padding-top: 5%;
+    }
+    .img1-top,
+    .img2-top,
+    .img1-bottom,
+    .img2-bottom {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        font-size: 24px;
+        text-transform: uppercase;
     }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -148,7 +157,6 @@
     .img1-top{
         width: 59%;
         height: 400px;
-        background-color: lightgray;
         margin-right: 0.5%;
         color: rgb(70, 70, 70);
         display: flex;
@@ -159,7 +167,6 @@
     .img2-top{
         width: 39%;
         height: 400px;
-        background-color: lightgray;
         margin-left: 0.5%;
         color: rgb(70, 70, 70);
         display: flex;
@@ -170,7 +177,6 @@
     .img1-bottom{
         width: 39%;
         height: 300px;
-        background-color: lightgray;
         margin-right: 0.5%;
         color: rgb(70, 70, 70);
         display: flex;
@@ -181,7 +187,6 @@
     .img2-bottom{
         width: 59%;
         height: 300px;
-        background-color: lightgray;
         margin-left: 0.5%;
         color: rgb(70, 70, 70);
         display: flex;
@@ -194,6 +199,20 @@
         flex-direction: column;
         align-items: center;
         padding-top: 5%;
+    }
+    .img1-top,
+    .img2-top,
+    .img1-bottom,
+    .img2-bottom {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        font-size: 24px;
+        text-transform: uppercase;
     }
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
@@ -216,7 +235,6 @@
     }
     .img1-top{
         height: 200px;
-        background-color: lightgray;
         color: rgb(70, 70, 70);
         display: flex;
         align-items: center;
@@ -225,7 +243,6 @@
     }
     .img2-top{
         height: 200px;
-        background-color: lightgray;
         color: rgb(70, 70, 70);
         display: flex;
         align-items: center;
@@ -234,7 +251,6 @@
     }
     .img1-bottom{
         height: 200px;
-        background-color: lightgray;
         color: rgb(70, 70, 70);
         display: flex;
         align-items: center;
@@ -243,7 +259,6 @@
     }
     .img2-bottom{
         height: 200px;
-        background-color: lightgray;
         color: rgb(70, 70, 70);
         display: flex;
         align-items: center;
@@ -255,6 +270,20 @@
         flex-direction: column;
         align-items: center;
         padding-top: 5%;
+    }
+    .img1-top,
+    .img2-top,
+    .img1-bottom,
+    .img2-bottom {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        font-size: 24px;
+        text-transform: uppercase;
     }
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
@@ -274,7 +303,6 @@
     }
     .img1-top{
         height: 200px;
-        background-color: lightgray;
         color: rgb(70, 70, 70);
         display: flex;
         align-items: center;
@@ -283,7 +311,6 @@
     }
     .img2-top{
         height: 200px;
-        background-color: lightgray;
         color: rgb(70, 70, 70);
         display: flex;
         align-items: center;
@@ -292,7 +319,6 @@
     }
     .img1-bottom{
         height: 200px;
-        background-color: lightgray;
         color: rgb(70, 70, 70);
         display: flex;
         align-items: center;
@@ -301,7 +327,6 @@
     }
     .img2-bottom{
         height: 200px;
-        background-color: lightgray;
         color: rgb(70, 70, 70);
         display: flex;
         align-items: center;
@@ -313,6 +338,20 @@
         flex-direction: column;
         align-items: center;
         padding-top: 5%;
+    }
+    .img1-top,
+    .img2-top,
+    .img1-bottom,
+    .img2-bottom {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        font-size: 24px;
+        text-transform: uppercase;
     }
 }
 .events-page-title h1{

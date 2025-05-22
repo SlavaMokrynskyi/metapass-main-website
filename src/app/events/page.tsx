@@ -2,7 +2,7 @@ import React from 'react'
 import NavBar from '@/components/NavBar/NavBar'
 import Footer from '@/components/Footer/Footer'
 import Form from '@/components/Form/Form'
-import Slider from '@/components/Slider/Slider'
+import Tickets from '@/components/Tickets/tickets'
 import './Events.css'
 
 const Events = () => {
@@ -20,28 +20,24 @@ const Events = () => {
 				<div className='img-grid'>
 					<div className='top-half'>
 						<div className='img1-top'>
-							<img src='null' alt='' />
-							there must be a photo
+							<img src='images\event1.jpg' alt='' />
 						</div>
 						<div className='img2-top'>
-							<img src='null' alt='' />
-							there must be a photo
+							<img src='images\event2.jpg' alt='' />
 						</div>
 					</div>
 					<div className='bottom-half'>
 						<div className='img1-bottom'>
-							<img src='null' alt='' />
-							there must be a photo
+							<img src='images\event3.avif' alt='' />
 						</div>
 						<div className='img2-bottom'>
-							<img src='null' alt='' />
-							there must be a photo
+							<img src='images\event4.jpg' alt='' />
 						</div>
 					</div>
 				</div>
 				<div className='ticket-shop'>
 					<h1>Buy a ticket</h1>
-					<Slider/>
+					<Tickets></Tickets>
 				</div>
 				<div className='form-div'>
 					<Form />

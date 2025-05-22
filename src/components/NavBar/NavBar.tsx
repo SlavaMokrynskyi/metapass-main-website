@@ -1,16 +1,49 @@
 'use client';
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import './NavBar.css'
 import { usePathname } from 'next/navigation';
+import Modal from '../ModalWindow/modal';
+import WalletConnect from '../WalletConnect/WalletConnect';
 
 const NavBar = () => {
 	const pathname = usePathname()
-	console.log(pathname)
+	const[isVisible, setIsVisible] = useState(true);
+	const[lastScrollY, setLastScrollY] = useState(0);
+	const[walletActive,setWalletActive] = useState(false);
+
+	useEffect(()=>{
+		const handlerScroll = () => {
+			const currentScrollY =  window.scrollY;
+			if (currentScrollY > lastScrollY && currentScrollY > 50) {
+				setIsVisible(false);
+			} else {
+				setIsVisible(true);
+			}
+			setLastScrollY(currentScrollY);
+		};
+		window.addEventListener('scroll', handlerScroll);
+		return () => window.removeEventListener('scroll', handlerScroll);
+	},[lastScrollY])
+
 	return (
 		<>
-			<div className='nav-bar'>
+		<Modal active = {walletActive} setActive={setWalletActive}>
+			<div className='auth-page'>
+				    <div className="auth-elipse1"></div>
+                    <div className="auth-elipse2"></div>
+                    <div className='auth-logic'>
+					    <div className='auth-title'>
+						    <h1>Continue with </h1>
+						    <img src='images\PhantomWallet_icon.png' alt='' />
+					    </div>
+                        <img src="images\phone_icon.png" alt="" />
+					    <WalletConnect />
+				    </div>
+			    </div>
+		</Modal>
+			<div className={`nav-bar ${isVisible ? 'visible' : 'hidden'}`}>
 				<div className='nav-bar-main-div'>
 					<p>METAPASS</p>
 					<Link
@@ -40,12 +73,7 @@ const NavBar = () => {
 					</Link>
 				</div>
 				<div className='wallet-link'>
-					<Link
-						href='/wallet'
-						className={`nav-link ${pathname === '/wallet' ? 'active' : ''}`}
-					>
-						Wallet
-					</Link>
+					<button onClick={()=>{setWalletActive(true)}}>Wallet</button>
 				</div>
 			</div>
 			<input type='checkbox' id='mobile-menu-toggle' hidden />
