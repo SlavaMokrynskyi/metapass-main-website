@@ -1,6 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
 import "./WalletConnect.css"
+import toast from 'react-hot-toast'
 
 export default function WalletConnect() {
 	const [walletAddress, setWalletAddress] = useState<string | null>(null)
@@ -24,7 +25,7 @@ export default function WalletConnect() {
 				const response = await solana.connect()
 				setWalletAddress(response.publicKey.toString())
 			} else {
-				alert('Phantom гаманець не знайдено. Встановіть його спочатку.')
+				toast.error('Phantom wallet not found. Install him first.')
 			}
 		} catch (err) {
 			console.error('Wallet connect error:', err)

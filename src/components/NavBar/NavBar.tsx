@@ -6,13 +6,29 @@ import './NavBar.css'
 import { usePathname } from 'next/navigation';
 import Modal from '../ModalWindow/modal';
 import WalletConnect from '../WalletConnect/WalletConnect';
+import toast from 'react-hot-toast';
 
 const NavBar = () => {
 	const pathname = usePathname()
 	const[isVisible, setIsVisible] = useState(true);
 	const[lastScrollY, setLastScrollY] = useState(0);
 	const[walletActive,setWalletActive] = useState(false);
+	const [walletAddress, setWalletAddress] = useState<string | null>(null)
 
+	const checkIfWalletIsConnected = async () => {
+		try {
+			const { solana } = window as any
+			if (solana && solana.isPhantom) {
+				const response = await solana.connect({ onlyIfTrusted: true })
+				setWalletAddress(response.publicKey.toString())
+			}
+		} catch (err) {
+			console.error(`Wallet connection error:{err}`)
+		}
+	}
+	useEffect(() => {
+		checkIfWalletIsConnected()
+	}, [])
 	useEffect(()=>{
 		const handlerScroll = () => {
 			const currentScrollY =  window.scrollY;
@@ -73,7 +89,11 @@ const NavBar = () => {
 					</Link>
 				</div>
 				<div className='wallet-link'>
-					<button onClick={()=>{setWalletActive(true)}}>Wallet</button>
+					{walletAddress ? (
+					<a>Connected</a>
+					) : (
+						<button onClick={()=>{setWalletActive(true)}}>Wallet</button>
+					)}		
 				</div>
 			</div>
 			<input type='checkbox' id='mobile-menu-toggle' hidden />
