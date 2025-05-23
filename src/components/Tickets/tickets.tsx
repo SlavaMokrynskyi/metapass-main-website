@@ -1,40 +1,24 @@
 "use client"
 import './tickets.css'
 import { Ticket, TicketsType } from '@/types/types';
-import { useState } from 'react'
 import React from 'react'
 import data from './data';
 import { useDispatch} from 'react-redux';
 import { addTicket } from '@/store';
-import Message from '@/components/Message/message';
+import toast from 'react-hot-toast';
 
 const Tickets = () => {
-	const[tickets] = useState<TicketsType>(data);
-    const[activeMessage, setMessageActive] = useState(false)
 
+	const tickets : TicketsType = data;
 	const dispatch = useDispatch();
 
 
-	const buyTicket = (index : number) =>{
-		const ticket: Ticket = {
-			id: tickets[index].id,
-			image: tickets[index].image,
-			name_event: tickets[index].name_event,
-			organizer: tickets[index].organizer,
-			event_type: tickets[index].event_type,
-			description: tickets[index].description,
-		} 
+	const buyTicket = (ticket : Ticket) =>{
 		dispatch(addTicket(ticket))
-
-        setMessageActive(true);
-        
 	}
 
   return (
 		<div className='tickets-box'>
-            <Message active={activeMessage} setActive = {setMessageActive}>
-                <p>You are successfully bought ticket!<br />You can see your tickets in a profile</p>    
-            </Message>
 			<div className='tickets-window'>
 				<div className='tickets'>
 					{data.map((ticket: Ticket) => (
@@ -53,7 +37,7 @@ const Tickets = () => {
 								    </div>
 							    </div>
 						    </div>
-                            <button onClick={() => buyTicket(ticket.id)} className='buy-btn'>
+                            <button onClick={() => buyTicket(ticket)} className='buy-btn'>
 								Buy
 							</button>
                         </div>

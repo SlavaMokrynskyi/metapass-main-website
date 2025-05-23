@@ -1,6 +1,7 @@
 import "./page.css";
 import NavBar from "@/components/NavBar/NavBar";
 import Footer from "@/components/Footer/Footer";
+import ProfileTickets from "@/components/ProfileTickets/profileTickets";
 
 export default function Profile() {
 
@@ -31,7 +32,7 @@ export default function Profile() {
 						</div>
 					</div>
 					<div className='left-side'>
-
+						<ProfileTickets></ProfileTickets>
 					</div>
 				</div>
 

@@ -1,7 +1,7 @@
 'use client';
 import React, { ReactElement, useState } from 'react'
 import './Form.css'
-import { ContactInfoType } from '@/types/contact_type';
+import { ContactInfoType } from '@/types/types';
 
 const Form = () => {
 

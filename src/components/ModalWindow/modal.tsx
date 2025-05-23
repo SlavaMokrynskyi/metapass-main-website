@@ -1,6 +1,5 @@
 import { ModalProps } from "@/types/types"
 import "./modal.css"
-import WalletConnect from "../WalletConnect/WalletConnect"
 const Modal : React.FC<ModalProps> = ({active,setActive,children}) =>{
 
     return(
