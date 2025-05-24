@@ -15,7 +15,7 @@ const ProfileTickets = () => {
                     {data.map((ticket: Ticket) => (
                         <div className='profile-ticket' key={ticket.id}>
 					    	<div className='profile-ticket-card' >
-				    			<img src={ticket.image} alt='' />
+				    			<img src="images/profile_ticket_icon.png" alt='' />
 			    				<div className='profile-ticket-info'>
                                     <div className='profile-ticket-info-text'>    
 	    							    <p>Event name: {ticket.name_event}</p>

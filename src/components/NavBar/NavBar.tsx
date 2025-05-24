@@ -95,8 +95,7 @@ const NavBar = () => {
 						<button onClick={()=>{setWalletActive(true)}}>Wallet</button>
 					)}		
 				</div>
-			</div>
-			<input type='checkbox' id='mobile-menu-toggle' hidden />
+				<input type='checkbox' id='mobile-menu-toggle' hidden />
 			<label htmlFor='mobile-menu-toggle' className='burger'>
 				<div></div>
 				<div></div>
@@ -135,6 +134,8 @@ const NavBar = () => {
 					wallet
 				</Link>
 			</div>
+			</div>
+			
 		</>
 	)
 }
