@@ -79,7 +79,6 @@
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .tickets-box {
-      width: 900px;
       margin: auto;
     }
     
@@ -92,6 +91,7 @@
     .tickets{
       display: flex;
       flex-direction: column;
+      align-items: center;
     }
     
     .ticket-card img {
@@ -101,6 +101,8 @@
     .ticket-card{
       display: flex;
       flex-direction: row;
+      align-items: center;
+      justify-content: center;
     }
     .ticket-info {
       display: flex;
@@ -252,7 +254,7 @@
     }
     
     .ticket-card img {
-      width: 100%;
+      width: 70%;
       border-radius: 10px;
     }
     .ticket-card{
@@ -284,7 +286,7 @@
       margin-top: 20px;
       height: 60px;
       border: 2px solid white;
-      width: 80%;
+      width: 60%;
       color: white;
       background-color: rgba(28, 3, 75, 1);
       font-size: 1.1rem;
